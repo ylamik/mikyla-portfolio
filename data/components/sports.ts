@@ -6,8 +6,9 @@ export const highlights: Highlight[] = [
     id: "badminton",
     name: "Badminton",
     items: [
-      "Champion, High School Badminton — SportsFest 2018–2019",
-      "2nd Runner-Up, Girls Badminton — Intercampus 2019",
+      "Champion, Mixed Doubles — UST CS Week 2025",
+      "Champion, Mixed Doubles — HS SportsFest 2018–2019",
+      "2nd Runner-Up, Girls' Doubles — Intercampus 2019",
       "Still my favorite way to recharge",
     ],
   },
