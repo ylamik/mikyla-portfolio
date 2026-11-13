@@ -742,6 +742,30 @@ footer{padding:0 28px 50px;display:flex;flex-wrap:wrap;justify-content:space-bet
   .cover-badge { font-size: 12px; padding: 5px 11px; }
 }
 
+
+/* =========================================================
+   PERFORMANCE ON PHONES & TABLETS
+   Same look, minus the effects that are expensive to redraw.
+   ========================================================= */
+@media (hover: none), (max-width: 760px) {
+  .grain { display: none; }
+  nav.top { backdrop-filter: none; -webkit-backdrop-filter: none; background: linear-gradient(#FFFCFF, #FFFCFF) padding-box, linear-gradient(90deg,#F7B6D2,#C9A9EE,#A9DDF5,#FFE49A,#F7B6D2) 0 0/300% 100% border-box; animation: none; }
+  .nav-shine::after { display: none; }
+  .flip .face-f { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(255,255,255,.16); }
+  .lightbox, #modal { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(28,16,66,.82); }
+  /* rose: drop the watercolor + shadow filters and the never-ending motion */
+  .rose-btn svg g, .rose-btn svg circle { filter: none !important; }
+  .rose-rays { animation: none; }
+  .rose-sec.bloom .rose-flower { animation: none; }
+  .rose-btn:hover { transform: none; }
+  /* glows */
+  .bf, .hspark, .hflower, .hang svg, .gold-bf, .orbit .bfo, .reel-track::after, .intro-name, #enterBtn { filter: none !important; }
+  .gold-bf { animation: bob 6s ease-in-out infinite; }
+  #glow { display: none; }
+  .kb { transition: none; }
+  .key { transition: none; }
+}
+
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
 }

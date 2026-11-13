@@ -18,8 +18,9 @@ export default function About() {
   useEffect(() => {
     const sec = sectionRef.current;
     if (!bloom || !sec || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const phone = window.matchMedia("(hover: none), (max-width: 760px)").matches;
     const id = setInterval(() => {
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < (phone ? 1 : 3); i++) {
         const p = document.createElement("span");
         p.className = "fall-petal";
         p.style.left = `${rand(5, 95)}%`;
@@ -29,7 +30,7 @@ export default function About() {
         p.addEventListener("animationend", () => p.remove());
         sec.appendChild(p);
       }
-    }, 500);
+    }, phone ? 900 : 500);
     return () => clearInterval(id);
   }, [bloom]);
 

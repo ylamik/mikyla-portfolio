@@ -19,6 +19,8 @@ let running = false;
 let last = 0;
 let ambientOn = false;
 
+const isPhone = () => typeof window !== "undefined" && window.matchMedia("(hover: none), (max-width: 760px)").matches;
+
 const prefersReduced = () =>
   typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -33,7 +35,7 @@ function make(size: number, pal: Palette, z: number, kind: Fly["kind"]): Fly {
   el.style.width = `${size}px`;
   el.style.zIndex = String(z);
   el.style.setProperty("--fl", `${rand(0.18, 0.34).toFixed(2)}s`);
-  el.style.filter = `drop-shadow(0 0 ${size / 4}px ${pal[2]})`;
+  if (!isPhone()) el.style.filter = `drop-shadow(0 0 ${size / 4}px ${pal[2]})`; // glow is costly on phones
   el.innerHTML = butterflySVG(pal[0], pal[1]);
   document.body.appendChild(el);
   return { el, size, x: 0, y: 0, px: 0, py: 0, ang: 0, op: 1, kind, vx: 0, vy: 0, life: 0, max: 2, heading: 0, speed: 0 };
@@ -112,6 +114,7 @@ function start() {
 /** Puff of butterflies flying out of a point on the screen. */
 export function burst(x: number, y: number, n = 12) {
   if (prefersReduced()) return;
+  if (isPhone()) n = Math.ceil(n / 2);
   for (let i = 0; i < n; i++) {
     const b = make(rand(18, 34), PALETTES[Math.floor(rand(0, PALETTES.length))], 95, "pop");
     const a = rand(0, Math.PI * 2);

@@ -1,10 +1,19 @@
-import type { CSSProperties } from "react";
+import { memo, type CSSProperties } from "react";
 import type { SkillKey } from "@/data/components/skills";
 
-type Props = { skill: SkillKey; down: boolean; onPress: () => void };
+type Props = {
+  skill: SkillKey;
+  row: number;
+  col: number;
+  down: boolean;
+  onPress: (skill: SkillKey, row: number, col: number) => void;
+};
 
-/** One keyboard key. Width and color come from the data file. */
-export default function Key({ skill, down, onPress }: Props) {
+/**
+ * One keyboard key. Width and color come from the data file.
+ * Wrapped in memo so pressing one key only redraws that key, not all 31 (much smoother on phones).
+ */
+function Key({ skill, row, col, down, onPress }: Props) {
   const isHeart = skill.label === "♥";
   const showHotkey = skill.hotkey.length === 1 && skill.hotkey !== " ";
   return (
@@ -12,7 +21,7 @@ export default function Key({ skill, down, onPress }: Props) {
       type="button"
       className={`key${isHeart ? " heart" : ""}${down ? " down" : ""}`}
       style={{ "--c": skill.color, "--w": skill.width } as CSSProperties}
-      onClick={onPress}
+      onClick={() => onPress(skill, row, col)}
       aria-label={isHeart ? "heart" : skill.label}
     >
       {showHotkey && <small>{skill.hotkey.toUpperCase()}</small>}
@@ -26,3 +35,5 @@ export default function Key({ skill, down, onPress }: Props) {
     </button>
   );
 }
+
+export default memo(Key);
