@@ -73,7 +73,10 @@ function Links({ project }: { project: Project }) {
       {project.status && <span className="status-pill">{project.status}</span>}
       {project.links.map((l) => (
         <a key={l.href} className="btn primary" href={l.href} target="_blank" rel="noreferrer">
-          {l.label} ↗
+          {l.label}
+          <svg className="ext-arrow" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 17L17 7M9 7H17V15" />
+          </svg>
         </a>
       ))}
     </>

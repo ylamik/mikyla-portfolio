@@ -97,7 +97,7 @@ export default function About() {
             <div className="mirror">
               <Image src="/images/profile-2.jpg" alt="Mikyla Caras" fill sizes="120px" className="photo photo-mirror" />
             </div>
-            <p className="eyebrow" style={{ fontSize: 40 }}>Hi, I&apos;m {profile.firstName} ♡</p>
+            <p className="eyebrow" style={{ fontSize: 40 }}>Hi, I&apos;m {profile.firstName} ♡︎</p>
             <h3 style={{ fontFamily: "var(--font-cute)", fontWeight: 600, fontSize: "clamp(22px,2.4vw,28px)", margin: "6px 0 12px", lineHeight: 1.25 }}>
               {profile.aboutHeadline}
             </h3>

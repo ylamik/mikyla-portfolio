@@ -18,7 +18,7 @@ export const highlights: Highlight[] = [
       "Dean's Lister, UST — 4 semesters (1st to 3rd year)",
       "With Highest Honors, Senior High School",
       "Honor student all through Junior High",
-      "Best in Math & Best in Science, JHS",
+      "Best in Math, JHS",
       "MTAP math competition participant",
     ],
   },

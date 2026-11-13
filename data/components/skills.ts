@@ -34,13 +34,13 @@ export const keyboard: SkillKey[][] = [
     { label: "Linux", hotkey: "l", color: "var(--color-mint)", width: 1, info: "Ubuntu — Petalpace runs on our Vultr VPS with key-only SSH, reached through a DuckDNS domain." },
     { label: "nginx", hotkey: "x", color: "#FBC8DE", width: 1, info: "nginx — reverse proxy and HTTPS for Petalpace." },
     { label: "Kaggle", hotkey: "e", color: "var(--color-sky)", width: 1, info: "Kaggle — where I ran VERITAS experiments on OpenForensics." },
-    { label: "hire me ↵", hotkey: "Enter", color: "var(--color-butter)", width: 2, info: "Open to internships and junior roles in frontend, UI/UX or QA. The envelope at the bottom is for you ✉" },
+    { label: "hire me ↵", hotkey: "Enter", color: "var(--color-butter)", width: 2, info: "Open to internships and junior roles in frontend, UI/UX or QA. The envelope at the bottom has my contact details." },
   ],
   [
     { label: "UST", hotkey: "u", color: "var(--color-lav)", width: 1, info: "University of Santo Tomas — BS Computer Science, Data Science. Expected 2027." },
     { label: "CSS", hotkey: "c", color: "#FBC8DE", width: 1, info: "Computer Science Society — Exec. Assistant to the PRO (2025–26), Academics Committee (2024–25)." },
     { label: "✦  space  ✦", hotkey: " ", color: "var(--color-cream)", width: 4.2, info: "Sparkle burst! ✦" },
-    { label: "★", hotkey: "m", color: "var(--color-butter)", width: 1, info: "Certified: Data Engineer Associate (DataCamp) and Responsive Web Design (freeCodeCamp)." },
+    { label: "★︎", hotkey: "m", color: "var(--color-butter)", width: 1, info: "Certified: Data Engineer Associate (DataCamp) and Responsive Web Design (freeCodeCamp)." },
     { label: "HTML", hotkey: "z", color: "var(--color-sky)", width: 1, info: "HTML & CSS — the very first thing I learned to build with." },
   ],
 ];

@@ -743,6 +743,9 @@ footer{padding:0 28px 50px;display:flex;flex-wrap:wrap;justify-content:space-bet
 }
 
 
+/* little "opens in a new tab" arrow on link buttons (drawn, so iPhones don't turn it into an emoji) */
+.ext-arrow { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
 /* =========================================================
    PERFORMANCE ON PHONES & TABLETS
    Same look, minus the effects that are expensive to redraw.

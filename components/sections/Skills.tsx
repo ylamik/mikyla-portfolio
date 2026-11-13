@@ -51,7 +51,7 @@ export default function Skills() {
       sfx.click(0.8 + row * 0.15 + col * 0.04);
       setCount((c) => c + 1);
       setIcon({
-        text: skill.label === "♥" ? "♥" : skill.label.replace(/[✦↵]/g, "").trim().slice(0, 4) || "✦",
+        text: skill.label === "♥" ? "♥︎" : skill.label.replace(/[✦↵]/g, "").trim().slice(0, 4) || "✦",
         color: skill.color,
       });
       typeOut(skill.info);
