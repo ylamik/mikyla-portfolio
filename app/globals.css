@@ -1,26 +1,31 @@
 @import "tailwindcss";
+@import "./portfolio.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* fonts — "inline" because they point to variables made in layout.tsx */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-title: var(--font-display); /* Shrikhand   → font-title */
+  --font-hand: var(--font-script);   /* Great Vibes → font-hand  */
+  --font-ui: var(--font-cute);       /* Fredoka     → font-ui    */
+  --font-sans: var(--font-body);     /* DM Sans     → default    */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* colors — normal @theme so they also exist as real CSS variables (var(--color-plum) …) */
+@theme {
+  --color-plum: #5b3a86;
+  --color-ink: #3a2160;
+  --color-text: #4f3f6b;
+  --color-accent: #7b2d8e;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --color-lav: #e6d6f8;
+  --color-lav2: #cdb2ef;
+  --color-lav3: #b79be3;
+  --color-pink: #f7b6d2;
+  --color-rose: #ec8dba;
+  --color-butter: #ffe49a;
+  --color-sky: #a9ddf5;
+  --color-mint: #b5ede4;
+  --color-peach: #ffc6b3;
+
+  --color-cream: #fffbf2;
+  --color-paper: #f8f3fc;
 }

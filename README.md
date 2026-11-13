@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mikyla Caras — Portfolio
 
-## Getting Started
+A storybook-themed personal portfolio: pastel, a little magical, and still professional.
+Built with **Next.js**, **React**, **TypeScript** and **Tailwind CSS**.
 
-First, run the development server:
+**Live site:** _add your Vercel link here_
+
+## Features
+
+- **Animated intro** — butterflies swarm in, a wishing-star arc draws itself and the name writes itself in; **Enter** opens the site with a growing circle
+- **Navbar** with a shimmering border, a hanging star charm and a highlight bubble that follows the section you're reading
+- **About** — click the rose to make it bloom and open the "about me" window
+- **Projects** — a little street of windows whose shutters swing open; each project has a story page and a zoomable screenshot gallery
+- **Skills** — a clicky pastel keyboard that also works with your real keyboard (the space bar is a surprise)
+- **Beyond the screen** — flip cards plus a "memory reel" of polaroids on a fairy-light string
+- **Contact** — an envelope that opens into a letter with contact links
+- Cursor sparkles, wandering butterflies, scroll progress bar and sound effects with a mute toggle
+- Fully responsive, and respects the "reduce motion" accessibility setting
+
+## Tech stack
+
+| | |
+|---|---|
+| Framework | Next.js (App Router) |
+| Language | TypeScript, React |
+| Styling | Tailwind CSS + custom CSS animations |
+| Fonts | Shrikhand, Great Vibes, Fredoka, DM Sans (via `next/font`) |
+| Images | `next/image` |
+| Sound | Web Audio API |
+| Hosting | Vercel |
+
+## Run it locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/            layout, page, global styles (portfolio.css), favicon
+components/
+  intro/        opening screen
+  layout/       navbar, footer
+  sections/     hero, about, work, skills, beyond, leadership, contact
+  ui/           reusable pieces (rose, project window, gallery, keys, flip cards…)
+  effects/      butterflies, cursor trail, scroll reveal
+data/components/  all the text: profile, projects, skills, highlights, gallery
+lib/            butterfly engine, sounds, helpers
+hooks/          small React hooks
+public/         images, CV
+```
 
-## Learn More
+## Editing content
 
-To learn more about Next.js, take a look at the following resources:
+All the words and links live in `data/components/`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `profile.ts` — name, intro, about text, contact links, leadership, certifications
+- `project.ts` — projects, their screenshots and links
+- `skills.ts` — the keyboard keys and their messages
+- `sports.ts` — the "beyond the screen" cards
+- `gallery.ts` — photos in the memory reel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contact
 
-## Deploy on Vercel
+- Email: carasmikyla02@gmail.com
+- LinkedIn: https://linkedin.com/in/mikyla-caras-2750b937b
+- GitHub: https://github.com/ylamik
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Designed & built by Mikyla Caras · 2026
