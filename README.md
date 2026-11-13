@@ -3,7 +3,7 @@
 A storybook-themed personal portfolio: pastel, a little magical, and still professional.
 Built with **Next.js**, **React**, **TypeScript** and **Tailwind CSS**.
 
-**Live site:** _add your Vercel link here_
+**Live site:** [mikyla-portfolio-jade.vercel.app](https://mikyla-portfolio-jade.vercel.app)
 
 ## Features
 
@@ -69,6 +69,7 @@ All the words and links live in `data/components/`:
 - Email: carasmikyla02@gmail.com
 - LinkedIn: https://linkedin.com/in/mikyla-caras-2750b937b
 - GitHub: https://github.com/ylamik
+- Portfolio: https://mikyla-portfolio-jade.vercel.app
 
 ---
 
